@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos de Servicio - BillCode</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+<link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { 
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #2d3561 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <!-- Elementos flotantes de fondo -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="floating absolute top-20 left-10 w-20 h-20 bg-blue-500 rounded-full opacity-10"></div>
+        <div class="floating absolute top-40 right-20 w-16 h-16 bg-purple-500 rounded-full opacity-10" style="animation-delay: -2s;"></div>
+        <div class="floating absolute bottom-40 left-20 w-12 h-12 bg-indigo-500 rounded-full opacity-10" style="animation-delay: -4s;"></div>
+        <div class="floating absolute bottom-20 right-10 w-24 h-24 bg-cyan-500 rounded-full opacity-10" style="animation-delay: -1s;"></div>
+    </div>
+    
+    <div class="min-h-screen py-16 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <div class="mb-6">
+                    <i class="fas fa-file-contract text-6xl text-blue-400 floating"></i>
+                </div>
+                <h1 class="text-4xl font-bold mb-4 gradient-text">Términos de Servicio</h1>
+                <p class="text-gray-400">Última actualización: <span id="current-date">enero de 2024</span></p>
+            </div>
+            
+            <div class="bg-gray-800 rounded-lg p-8 space-y-8 scroll-reveal glow-effect">
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-handshake text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">1. Aceptación de Términos</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Al contratar los servicios de BillCode, aceptas estos términos y condiciones. Si no estás de acuerdo con alguno de estos términos, no debes utilizar nuestros servicios.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">2. Servicios Ofrecidos</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        BillCode ofrece servicios de desarrollo web que incluyen:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Desarrollo de landing pages</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Sitios web corporativos</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Aplicaciones web</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Tiendas online (e-commerce)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Servicios de hosting y dominio</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Mantenimiento web</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Optimización y rediseño web</li>
+                    </ul>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tasks text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">3. Proceso de Trabajo</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Nuestro proceso incluye análisis de requerimientos, diseño, desarrollo, pruebas y entrega. Los tiempos de entrega se acordarán previamente y pueden variar según la complejidad del proyecto.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-credit-card text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">4. Pagos y Facturación</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Los términos de pago son:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>50% de adelanto para iniciar el proyecto</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>50% restante al finalizar y entregar el proyecto</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Los servicios de mantenimiento se facturan mensualmente</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Los servicios de hosting se facturan anualmente</li>
+                    </ul>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-copyright text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">5. Propiedad Intelectual</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Una vez completado el pago total, el cliente obtiene todos los derechos sobre el código desarrollado. BillCode se reserva el derecho de mostrar el trabajo realizado en su portafolio.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">6. Garantías</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Ofrecemos 30 días de garantía post-entrega para corrección de errores. No incluye nuevas funcionalidades o cambios en el diseño original.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-exclamation-triangle text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">7. Limitación de Responsabilidad</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        BillCode no será responsable por daños indirectos, incidentales o consecuentes que puedan surgir del uso de nuestros servicios.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-edit text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">8. Modificaciones</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios serán notificados a través de nuestro sitio web.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">9. Contacto</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Para cualquier consulta sobre estos términos, puedes contactarnos a través de WhatsApp al +51 927 450 053.
+                    </p>
+                </section>
+            </div>
+            
+            <div class="text-center mt-8 scroll-reveal">
+                <a href="../" class="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-xl text-white font-semibold transition-all duration-300 transform hover:scale-105 glow-effect">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Actualizar fecha dinámicamente
+        function updateDate() {
+            const now = new Date();
+            const months = [
+                'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+            ];
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+            document.getElementById('current-date').textContent = `${month} de ${year}`;
+        }
+        
+        // Animaciones de scroll reveal
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        // Inicializar cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDate();
+            revealOnScroll();
+        });
+        
+        // Ejecutar animaciones al hacer scroll
+        window.addEventListener('scroll', revealOnScroll);
+    </script>
+</body>
+</html>

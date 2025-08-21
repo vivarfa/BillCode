@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - BillCode</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+<link rel="shortcut icon" type="image/png" href="../assets/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { 
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full opacity-10 floating-animation"></div>
+        <div class="absolute top-40 right-20 w-24 h-24 bg-purple-500 rounded-full opacity-10 floating-animation" style="animation-delay: -2s;"></div>
+        <div class="absolute bottom-20 left-1/4 w-20 h-20 bg-green-500 rounded-full opacity-10 floating-animation" style="animation-delay: -4s;"></div>
+    </div>
+    
+    <div class="min-h-screen py-16 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <div class="inline-block mb-4">
+                    <i class="fas fa-shield-alt text-6xl text-blue-400 glow-effect"></i>
+                </div>
+                <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Política de Privacidad</h1>
+                <p class="text-gray-400 text-lg">Última actualización: <span id="current-date"></span></p>
+            </div>
+            
+            <div class="gradient-bg rounded-2xl p-8 space-y-8 scroll-reveal glow-effect">
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-database text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">1. Información que Recopilamos</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        En BillCode, recopilamos información que nos proporcionas directamente cuando te comunicas con nosotros, solicitas nuestros servicios o utilizas nuestro sitio web. Esta información puede incluir tu nombre, dirección de correo electrónico, número de teléfono y detalles sobre tu proyecto.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cogs text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">2. Cómo Utilizamos tu Información</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Utilizamos la información recopilada para:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Proporcionar y mejorar nuestros servicios de desarrollo web</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Comunicarnos contigo sobre tu proyecto</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Enviar actualizaciones sobre el progreso de tu trabajo</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Responder a tus consultas y solicitudes de soporte</li>
+                    </ul>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-lock text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">3. Protección de Datos</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger tu información personal contra el acceso no autorizado, alteración, divulgación o destrucción.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-share-alt text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">4. Compartir Información</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        No vendemos, intercambiamos ni transferimos tu información personal a terceros sin tu consentimiento, excepto cuando sea necesario para proporcionar nuestros servicios o cuando la ley lo requiera.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cookie-bite text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">5. Cookies</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Nuestro sitio web puede utilizar cookies para mejorar tu experiencia de navegación. Puedes configurar tu navegador para rechazar cookies, aunque esto puede afectar la funcionalidad del sitio.
+                    </p>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-user-shield text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">6. Tus Derechos</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Tienes derecho a:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Acceder a tu información personal</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Rectificar datos inexactos</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Solicitar la eliminación de tus datos</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-sm"></i>Oponerte al procesamiento de tus datos</li>
+                    </ul>
+                </section>
+                
+                <section class="scroll-reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                        <h2 class="text-2xl font-bold text-blue-400">7. Contacto</h2>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Si tienes preguntas sobre esta política de privacidad, puedes contactarnos a través de WhatsApp al +51 927 450 053 o por correo electrónico.
+                    </p>
+                </section>
+            </div>
+            
+            <div class="text-center mt-8 scroll-reveal">
+                <a href="../" class="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-xl text-white font-semibold transition-all duration-300 transform hover:scale-105 glow-effect">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </div>
+        
+        <script>
+            // Actualizar fecha dinámicamente
+            function updateDate() {
+                const now = new Date();
+                const months = [
+                    'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                    'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+                ];
+                const month = months[now.getMonth()];
+                const year = now.getFullYear();
+                document.getElementById('current-date').textContent = `${month} de ${year}`;
+            }
+            
+            // Animaciones de scroll reveal
+            function revealOnScroll() {
+                const reveals = document.querySelectorAll('.scroll-reveal');
+                
+                reveals.forEach(element => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < windowHeight - elementVisible) {
+                        element.classList.add('active');
+                    }
+                });
+            }
+            
+            // Inicializar cuando se carga la página
+            document.addEventListener('DOMContentLoaded', function() {
+                updateDate();
+                revealOnScroll();
+            });
+            
+            // Ejecutar animaciones al hacer scroll
+            window.addEventListener('scroll', revealOnScroll);
+        </script>
+    </body>
+</html>

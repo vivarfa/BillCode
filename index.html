@@ -1,0 +1,3046 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillCodex - Desarrollador Web</title>
+    <meta name="description" content="Desarrollador web senior con 6+ años de experiencia. Especialista en HTML5, CSS, JavaScript, React y Tailwind CSS. Soluciones web profesionales sin dependencias de CMS.">
+    <meta name="keywords" content="desarrollador web senior, freelance profesional, HTML5, CSS3, JavaScript, Tailwind CSS, código puro, sitios web corporativos, aplicaciones web empresariales">
+    <meta name="author" content="BillCodex - Desarrollador Web">
+    <meta property="og:title" content="BillCodex - Desarrollador Web">
+    <meta property="og:description" content="Desarrollador web con 6+ años de experiencia. Código 100% puro, sin WordPress ni CMS. Soluciones empresariales únicas, rápidas y seguras.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=630&fit=crop&auto=format">
+    <link rel="canonical" href="https://billcodex.com">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+       
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-bg: #0a0e27;
+            --dark-card: #1a1f3a;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Light Theme Variables */
+        [data-theme="light"] {
+            --dark-bg: #f8fafc;
+            --dark-card: #ffffff;
+            --glass-bg: rgba(0, 0, 0, 0.05);
+            --glass-border: rgba(0, 0, 0, 0.1);
+        }
+        
+        [data-theme="light"] body {
+            background: #ffffff !important;
+            color: #1a202c;
+        }
+        
+        /* Light Theme - All Sections White Background */
+        [data-theme="light"] section {
+            background: #ffffff !important;
+        }
+        
+        [data-theme="light"] .max-w-6xl,
+        [data-theme="light"] .max-w-7xl {
+            background: transparent !important;
+        }
+        
+        /* Logo Animations */
+         .logo-container {
+             position: relative;
+         }
+         
+         .logo-img {
+              filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.2));
+              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+              background: transparent;
+          }
+         
+         .logo-img:hover {
+             filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.3));
+             transform: scale(1.05) rotate(3deg);
+         }
+         
+         /* Responsive Logo Sizes */
+         @media (max-width: 640px) {
+             .logo-img {
+                 width: 2rem !important;
+                 height: 2rem !important;
+             }
+         }
+         
+         @media (min-width: 641px) and (max-width: 768px) {
+             .logo-img {
+                 width: 2.5rem !important;
+                 height: 2.5rem !important;
+             }
+         }
+        
+        /* Light Theme Hero Section Background */
+        [data-theme="light"] #inicio {
+            background: #ffffff !important;
+        }
+        
+        [data-theme="light"] #inicio .absolute.inset-0.bg-gradient-to-br {
+            background: #ffffff !important;
+            opacity: 1 !important;
+        }
+        
+        [data-theme="light"] #inicio .absolute.inset-0 {
+            background: #ffffff !important;
+        }
+        
+        [data-theme="light"] .enhanced-card {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            color: #1a202c !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+        }
+        
+        [data-theme="light"] .glass {
+            background: rgba(255, 255, 255, 0.9) !important;
+            border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .navbar-blur {
+            background: rgba(248, 250, 252, 0.85);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        [data-theme="light"] .text-gray-300 {
+            color: #4a5568 !important;
+        }
+        
+        [data-theme="light"] .text-gray-400 {
+            color: #718096 !important;
+        }
+        
+        /* Light Theme - All Text Colors */
+        [data-theme="light"] .text-blue-400 {
+            color: #1d4ed8 !important;
+        }
+        
+        [data-theme="light"] .text-purple-400 {
+            color: #7c3aed !important;
+        }
+        
+        [data-theme="light"] .text-green-400 {
+            color: #059669 !important;
+        }
+        
+        [data-theme="light"] .text-pink-400 {
+            color: #db2777 !important;
+        }
+        
+        [data-theme="light"] .text-cyan-400 {
+            color: #0891b2 !important;
+        }
+        
+        [data-theme="light"] .text-yellow-400 {
+            color: #d97706 !important;
+        }
+        
+        [data-theme="light"] .text-orange-400 {
+            color: #ea580c !important;
+        }
+        
+        /* Light Theme Title and Heading Styles */
+        [data-theme="light"] h1,
+        [data-theme="light"] h2,
+        [data-theme="light"] h3,
+        [data-theme="light"] h4,
+        [data-theme="light"] h5,
+        [data-theme="light"] h6 {
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .text-white {
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .font-bold,
+        [data-theme="light"] .font-semibold {
+            color: #1a202c !important;
+        }
+        
+        /* Light theme navigation links */
+        [data-theme="light"] .nav-link {
+            color: #4a5568 !important;
+        }
+        
+        [data-theme="light"] .nav-link:hover {
+            color: #3b82f6 !important;
+        }
+        
+        /* Light Theme Dropdown Styles */
+        [data-theme="light"] .dropdown-content {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        [data-theme="light"] .dropdown-item {
+            color: #1a202c;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        [data-theme="light"] .dropdown-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+        }
+        
+        /* Light Theme Hero Title Styles */
+        [data-theme="light"] .bg-gradient-to-r.from-blue-400.to-purple-500.bg-clip-text.text-transparent {
+            background: linear-gradient(to right, #1e40af, #7c3aed) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            color: transparent !important;
+        }
+        
+        [data-theme="light"] .bg-gradient-to-r.from-purple-400.to-pink-500.bg-clip-text.text-transparent {
+            background: linear-gradient(to right, #7c3aed, #db2777) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            color: transparent !important;
+        }
+        
+        /* Light Theme Hero Text Colors */
+        [data-theme="light"] #inicio .text-gray-300 {
+            color: #374151 !important;
+        }
+        
+        [data-theme="light"] #inicio .text-gray-400 {
+            color: #6b7280 !important;
+        }
+        
+        [data-theme="light"] #inicio h2 {
+            color: #1f2937 !important;
+        }
+        
+        [data-theme="light"] #inicio p {
+            color: #374151 !important;
+        }
+        
+        [data-theme="light"] #inicio .text-blue-400 {
+            color: #1d4ed8 !important;
+        }
+        
+        [data-theme="light"] #inicio .text-purple-400 {
+            color: #7c3aed !important;
+        }
+        
+        [data-theme="light"] #inicio .text-green-400 {
+            color: #059669 !important;
+        }
+        
+        [data-theme="light"] #inicio .text-pink-400 {
+            color: #db2777 !important;
+        }
+        
+        /* Light Theme - Service Icons and Backgrounds */
+        [data-theme="light"] .service-icon {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+        }
+        
+        [data-theme="light"] .bg-orange-600 {
+            background-color: #ea580c !important;
+        }
+        
+        [data-theme="light"] .bg-blue-600 {
+            background-color: #2563eb !important;
+        }
+        
+        [data-theme="light"] .bg-yellow-600 {
+            background-color: #d97706 !important;
+        }
+        
+        [data-theme="light"] .bg-cyan-600 {
+            background-color: #0891b2 !important;
+        }
+        
+        [data-theme="light"] .bg-green-600 {
+            background-color: #059669 !important;
+        }
+        
+        [data-theme="light"] .bg-gray-600 {
+            background-color: #4b5563 !important;
+        }
+        
+        /* Light Theme - Counter Numbers */
+        [data-theme="light"] .counter {
+            color: #1d4ed8 !important;
+        }
+        
+        /* Light Theme - Technology Icons and Backgrounds */
+        [data-theme="light"] .bg-orange-600.bg-opacity-20 {
+            background-color: rgba(234, 88, 12, 0.15) !important;
+            border: 1px solid rgba(234, 88, 12, 0.3) !important;
+        }
+        
+        [data-theme="light"] .bg-blue-600.bg-opacity-20 {
+            background-color: rgba(37, 99, 235, 0.15) !important;
+            border: 1px solid rgba(37, 99, 235, 0.3) !important;
+        }
+        
+        [data-theme="light"] .bg-yellow-600.bg-opacity-20 {
+            background-color: rgba(217, 119, 6, 0.15) !important;
+            border: 1px solid rgba(217, 119, 6, 0.3) !important;
+        }
+        
+        [data-theme="light"] .bg-cyan-600.bg-opacity-20 {
+            background-color: rgba(8, 145, 178, 0.15) !important;
+            border: 1px solid rgba(8, 145, 178, 0.3) !important;
+        }
+        
+        [data-theme="light"] .bg-green-600.bg-opacity-20 {
+            background-color: rgba(5, 150, 105, 0.15) !important;
+            border: 1px solid rgba(5, 150, 105, 0.3) !important;
+        }
+        
+        [data-theme="light"] .bg-gray-600.bg-opacity-20 {
+            background-color: rgba(75, 85, 99, 0.15) !important;
+            border: 1px solid rgba(75, 85, 99, 0.3) !important;
+        }
+        
+        [data-theme="light"] .bg-purple-600.bg-opacity-20 {
+            background-color: rgba(124, 58, 237, 0.15) !important;
+            border: 1px solid rgba(124, 58, 237, 0.3) !important;
+        }
+        
+        /* Light Theme - Technology Icon Colors */
+        [data-theme="light"] .text-orange-400 {
+            color: #ea580c !important;
+        }
+        
+        [data-theme="light"] .text-yellow-400 {
+            color: #d97706 !important;
+        }
+        
+        [data-theme="light"] .text-cyan-400 {
+            color: #0891b2 !important;
+        }
+        
+        [data-theme="light"] .text-green-400 {
+            color: #059669 !important;
+        }
+        
+        [data-theme="light"] .text-gray-400 {
+            color: #4b5563 !important;
+        }
+        
+        [data-theme="light"] .text-purple-400 {
+            color: #7c3aed !important;
+        }
+        
+        /* Light Theme - Footer Styles */
+        [data-theme="light"] footer {
+            background: #ffffff !important;
+            border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        [data-theme="light"] footer h3,
+        [data-theme="light"] footer h4,
+        [data-theme="light"] footer h5 {
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] footer p,
+        [data-theme="light"] footer .text-gray-400 {
+            color: #4a5568 !important;
+        }
+        
+        [data-theme="light"] footer a {
+            color: #4a5568 !important;
+        }
+        
+        [data-theme="light"] footer a:hover {
+            color: #3b82f6 !important;
+        }
+        
+        [data-theme="light"] footer .bg-green-600 {
+            background-color: #059669 !important;
+        }
+        
+        [data-theme="light"] footer .bg-blue-600 {
+            background-color: #2563eb !important;
+        }
+        
+        [data-theme="light"] footer .bg-blue-700 {
+            background-color: #1d4ed8 !important;
+        }
+        
+        [data-theme="light"] footer .bg-gray-700 {
+            background-color: #374151 !important;
+        }
+        
+        [data-theme="light"] footer .bg-purple-600 {
+            background-color: #7c3aed !important;
+        }
+        
+        [data-theme="light"] .form-input {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            color: #1a202c;
+        }
+        
+        [data-theme="light"] .form-input select {
+            background: rgba(0, 0, 0, 0.05);
+            color: #1a202c;
+        }
+        
+        [data-theme="light"] .form-input select option {
+            background: #ffffff;
+            color: #1a202c;
+        }
+       
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+       
+        body {
+            background: var(--dark-bg);
+            color: white;
+            overflow-x: hidden;
+        }
+       
+        /* Enhanced Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(-5px) rotate(-1deg); }
+        }
+       
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(139, 92, 246, 0.3); }
+        }
+       
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+       
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+       
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Process Animation */
+        @keyframes processSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes processFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes processGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+        }
+
+        .process-item {
+            animation: processSlideIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .process-item.animate {
+            animation: processSlideIn 0.8s ease-out forwards, processFloat 3s ease-in-out infinite 1s;
+        }
+
+        .process-number {
+            animation: processGlow 2s ease-in-out infinite;
+        }
+       
+        /* Glass Morphism */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+        }
+       
+        /* Enhanced Cards - Equal Height */
+        .enhanced-card {
+            background: linear-gradient(145deg, var(--dark-card), #252b5c);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .service-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .service-cards-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .service-card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card-features {
+            flex: 1;
+        }
+       
+        .enhanced-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+       
+        .enhanced-card:hover::before {
+            left: 100%;
+        }
+       
+        .enhanced-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
+        }
+       
+        /* Interactive Buttons */
+        .btn-primary {
+            background: var(--primary-gradient);
+            border: none !important;
+            outline: none !important;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:focus {
+            border: none !important;
+            outline: none !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+        }
+       
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+       
+        .btn-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+       
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+       
+        /* Floating Elements */
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+       
+        /* Navigation */
+        .navbar-blur {
+            background: rgba(10, 14, 39, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+       
+        /* Enhanced Hero Code Animation */
+        .code-container {
+            background: linear-gradient(145deg, #1a1f3a, #0f1419);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(59, 130, 246, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .code-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            animation: codeShine 3s infinite;
+        }
+        
+        @keyframes codeShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .code-header {
+            background: linear-gradient(90deg, #2d3748, #1a202c);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            position: relative;
+        }
+        
+        .code-dots {
+            display: flex;
+            gap: 6px;
+        }
+        
+        .code-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .code-dot::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: dotPulse 2s infinite;
+        }
+        
+        .code-dot.red::before {
+            background: #ef4444;
+            animation-delay: 0s;
+        }
+        
+        .code-dot.yellow::before {
+            background: #f59e0b;
+            animation-delay: 0.3s;
+        }
+        
+        .code-dot.green::before {
+            background: #10b981;
+            animation-delay: 0.6s;
+        }
+        
+        @keyframes dotPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.7; }
+        }
+        
+        .code-filename {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 6px;
+            padding: 4px 12px;
+            font-size: 11px;
+            color: #60a5fa;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .code-filename::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+            animation: filenameGlow 4s infinite;
+        }
+        
+        @keyframes filenameGlow {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .code-content {
+            background: linear-gradient(145deg, #0f1419, #1a1f3a);
+            position: relative;
+        }
+        
+        .code-line {
+            display: flex;
+            align-items: center;
+            padding: 2px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .code-line:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+        
+        .line-number {
+            width: 30px;
+            text-align: right;
+            color: #4a5568;
+            font-size: 10px;
+            margin-right: 12px;
+            user-select: none;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid #3b82f6;
+            white-space: nowrap;
+            animation: typewriter 4s steps(40) infinite, blink 1s infinite;
+            position: relative;
+        }
+        
+        .typewriter::after {
+            content: '';
+            position: absolute;
+            right: -2px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #3b82f6;
+            animation: blink 1s infinite;
+        }
+        
+        .code-syntax-html { color: #f97316; }
+        .code-syntax-tag { color: #60a5fa; }
+        .code-syntax-attr { color: #a78bfa; }
+        .code-syntax-string { color: #34d399; }
+        .code-syntax-comment { color: #6b7280; font-style: italic; }
+        .code-syntax-keyword { color: #f472b6; }
+        
+        .code-status {
+            background: linear-gradient(90deg, #065f46, #047857);
+            border-top: 1px solid rgba(16, 185, 129, 0.3);
+            position: relative;
+        }
+        
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: statusPulse 2s infinite;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+        
+        @keyframes statusPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+        
+        .floating-icon {
+            position: absolute;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 10px 25px rgba(59, 130, 246, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            animation: floatingIcon 6s ease-in-out infinite;
+        }
+        
+        @keyframes floatingIcon {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-15px) rotate(5deg); }
+            66% { transform: translateY(-8px) rotate(-3deg); }
+        }
+        
+        /* Light theme code container */
+        [data-theme="light"] .code-container {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(59, 130, 246, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+        
+        [data-theme="light"] .code-header {
+            background: linear-gradient(90deg, #f1f5f9, #e2e8f0);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        [data-theme="light"] .code-content {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+        }
+        
+        [data-theme="light"] .code-filename {
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb;
+        }
+        
+        [data-theme="light"] .line-number {
+            color: #64748b;
+        }
+        
+        [data-theme="light"] .code-syntax-comment {
+            color: #64748b;
+        }
+        
+        [data-theme="light"] .code-status {
+            background: linear-gradient(90deg, #dcfce7, #bbf7d0);
+            border-top: 1px solid rgba(16, 185, 129, 0.3);
+        }
+       
+        /* Modal Styles */
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+       
+        .modal-content {
+            background: linear-gradient(145deg, var(--dark-card), #252b5c);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+       
+        /* Chat Bubble */
+        .chat-bubble {
+            background: var(--primary-gradient);
+            border-radius: 20px 20px 20px 5px;
+        }
+       
+        .chat-bubble-received {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px 20px 5px 20px;
+        }
+       
+        /* Form Enhancements */
+        .form-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+       
+        .form-input:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Fix select dropdown colors - Enhanced for better visibility */
+        .form-input select {
+            background: #2d3748 !important;
+            color: white !important;
+            border: 2px solid rgba(255, 255, 255, 0.3) !important;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+            background-position: right 12px center !important;
+            background-repeat: no-repeat !important;
+            background-size: 16px 12px !important;
+            padding-right: 40px !important;
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+        }
+
+        .form-input select option {
+            background-color: #1a202c !important;
+            background: #1a202c !important;
+            color: #ffffff !important;
+            padding: 12px !important;
+            border: none !important;
+        }
+
+        .form-input select option:hover {
+            background-color: #3b82f6 !important;
+            background: #3b82f6 !important;
+            color: #ffffff !important;
+        }
+
+        .form-input select option:checked,
+        .form-input select option:selected {
+            background-color: #3b82f6 !important;
+            background: #3b82f6 !important;
+            color: #ffffff !important;
+        }
+        
+        /* Force dark theme on all select elements */
+        select[name="service"],
+        select[name="budget"] {
+            background: #2d3748 !important;
+            color: white !important;
+        }
+        
+        select[name="service"] option,
+        select[name="budget"] option {
+            background: #1a202c !important;
+            color: white !important;
+        }
+
+        .form-input select:focus {
+            background: #374151 !important;
+            color: white !important;
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5) !important;
+            outline: none !important;
+        }
+        
+        /* Additional browser-specific fixes */
+        .form-input select::-ms-expand {
+            display: none;
+        }
+        
+        /* Force dark theme for select dropdowns */
+        select.form-input {
+            color-scheme: dark !important;
+        }
+       
+        /* WhatsApp Button & Chat */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            animation: glow 2s ease-in-out infinite alternate;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+       
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 320px;
+            background: var(--dark-card);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            transform: translateY(20px) scale(0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .whatsapp-chat.show {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .whatsapp-header {
+            background: #25d366;
+            padding: 16px;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .whatsapp-options {
+            padding: 20px;
+        }
+        
+        .whatsapp-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .whatsapp-option:hover {
+            background: rgba(37, 211, 102, 0.1);
+            border-color: #25d366;
+            transform: translateY(-2px);
+        }
+        
+        .whatsapp-option:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Light theme WhatsApp chat */
+        [data-theme="light"] .whatsapp-chat {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        [data-theme="light"] .whatsapp-option {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: #1a202c;
+        }
+        
+        [data-theme="light"] .whatsapp-option:hover {
+            background: rgba(37, 211, 102, 0.1);
+            border-color: #25d366;
+        }
+        
+        /* Light theme form improvements */
+        [data-theme="light"] .form-input {
+            background: #ffffff !important;
+            border: 2px solid #e2e8f0 !important;
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .form-input:focus {
+            border-color: #3b82f6 !important;
+            background: #ffffff !important;
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .form-input select {
+            background: #ffffff !important;
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .form-input select option {
+            background: #ffffff !important;
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .form-input::placeholder {
+            color: #718096 !important;
+        }
+        
+        /* Light theme text improvements */
+        [data-theme="light"] .text-white {
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .placeholder-gray-400::placeholder {
+            color: #718096 !important;
+        }
+        
+        /* Light theme additional text elements */
+        [data-theme="light"] span {
+            color: inherit;
+        }
+        
+        [data-theme="light"] .glass span {
+            color: #4a5568 !important;
+        }
+        
+        /* Light theme footer text */
+        [data-theme="light"] footer h4 {
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] footer p {
+            color: #4a5568 !important;
+        }
+        
+        /* Light theme service cards */
+        [data-theme="light"] .enhanced-card h3,
+        [data-theme="light"] .enhanced-card h4,
+        [data-theme="light"] .enhanced-card p {
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .enhanced-card .text-gray-300,
+        [data-theme="light"] .enhanced-card .text-gray-400 {
+            color: #4a5568 !important;
+        }
+        
+        /* Light theme testimonials */
+        [data-theme="light"] .testimonial-slide {
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .testimonial-slide h4,
+        [data-theme="light"] .testimonial-slide h3,
+        [data-theme="light"] .testimonial-slide .font-bold,
+        [data-theme="light"] .testimonial-slide .font-semibold {
+            color: #1a202c !important;
+        }
+        
+        [data-theme="light"] .testimonial-slide p,
+        [data-theme="light"] .testimonial-slide .text-gray-300,
+        [data-theme="light"] .testimonial-slide .text-gray-400 {
+            color: #4a5568 !important;
+        }
+        
+        [data-theme="light"] .testimonial-slide .text-white {
+            color: #1a202c !important;
+        }
+       
+        /* Progress Bar */
+        .progress-bar {
+            width: 0%;
+            height: 3px;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+       
+        /* Service Icons */
+        .service-icon {
+            background: var(--primary-gradient);
+            transition: all 0.3s ease;
+        }
+       
+        .service-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+       
+        /* Scroll Reveal */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+       
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+       
+        /* Mobile Menu Animation */
+        .mobile-menu-slide {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+       
+        .mobile-menu-slide:not(.hidden) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Navigation Links */
+        .mobile-nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mobile-nav-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Responsive improvements */
+        @media (max-width: 640px) {
+            .navbar-blur {
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+            
+            .mobile-menu-slide {
+                max-height: calc(100vh - 64px);
+                overflow-y: auto;
+            }
+        }
+       
+        /* Hide scrollbar */
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+       
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Service Dropdown */
+        .service-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: var(--dark-card);
+            min-width: 250px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            z-index: 1000;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            top: 100%;
+            left: 0;
+            margin-top: 8px;
+        }
+        
+        .dropdown-content.show {
+            display: block;
+            animation: slideInUp 0.3s ease-out;
+        }
+        
+        .dropdown-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+        }
+        
+        .dropdown-item:first-child {
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .dropdown-item:last-child {
+            border-radius: 0 0 12px 12px;
+        }
+        
+        /* Theme Toggle */
+        .theme-toggle {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(59, 130, 246, 0.2);
+        }
+        
+        /* Testimonials Carousel - True Infinite Scroll */
+        .testimonials-carousel {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        
+        .testimonials-track {
+            display: flex;
+            animation: infiniteScroll 120s linear infinite;
+            width: calc(300px * 52); /* 26 testimonials * 2 (duplicated) * 300px each */
+        }
+        
+        .testimonial-slide {
+            min-width: 300px;
+            flex-shrink: 0;
+            padding: 0 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .testimonial-slide {
+                min-width: 350px;
+            }
+            
+            .testimonials-track {
+                width: calc(350px * 52); /* 26 testimonials * 2 * 350px each */
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .testimonial-slide {
+                min-width: 400px;
+            }
+            
+            .testimonials-track {
+                width: calc(400px * 52); /* 26 testimonials * 2 * 400px each */
+            }
+        }
+        
+        @keyframes infiniteScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-300px * 26)); /* Move exactly one full set */
+            }
+        }
+        
+        @media (min-width: 768px) {
+            @keyframes infiniteScroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-350px * 26));
+                }
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            @keyframes infiniteScroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-400px * 26));
+                }
+            }
+        }
+        
+        .testimonials-carousel:hover .testimonials-track {
+            animation-play-state: paused;
+        }
+        
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        
+        .carousel-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-btn:hover {
+            background: var(--accent-blue);
+            transform: scale(1.1);
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: var(--accent-blue);
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
+        <div class="progress-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-40 navbar-blur">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#inicio" class="flex items-center space-x-3 group">
+                        <div class="logo-container">
+                            <img src="assets/images/logo.png" alt="BillCodex Logo" class="logo-img w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                        </div>
+                        <h1 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent transition-all duration-300 group-hover:from-purple-400 group-hover:to-blue-500">BillCodex</h1>
+                    </a>
+                </div>
+               
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#inicio" class="nav-link hover:text-blue-400 transition-all duration-300 relative text-sm">Inicio</a>
+                    <a href="#sobre-mi" class="nav-link hover:text-blue-400 transition-all duration-300 relative text-sm">Sobre Mí</a>
+                    <a href="#servicios" class="nav-link hover:text-blue-400 transition-all duration-300 relative text-sm">Servicios</a>
+                    <a href="#portafolio" class="nav-link hover:text-blue-400 transition-all duration-300 relative text-sm">Portafolio</a>
+                    <a href="#ventajas" class="nav-link hover:text-blue-400 transition-all duration-300 relative text-sm">Ventajas</a>
+                    <a href="#proceso" class="nav-link hover:text-blue-400 transition-all duration-300 relative text-sm">Proceso</a>
+                    <a href="#contacto" class="nav-link hover:text-blue-400 transition-all duration-300 relative text-sm">Contacto</a>
+                </div>
+               
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i id="theme-icon" class="fas fa-moon text-lg"></i>
+                    </button>
+                    <div class="service-dropdown">
+                        <button onclick="toggleServiceDropdown()" class="btn-primary px-6 py-2 rounded-lg text-white font-semibold relative z-10 flex items-center">
+                            Cotizar Proyecto
+                            <i class="fas fa-chevron-down ml-2 text-sm"></i>
+                        </button>
+                        <div id="service-dropdown" class="dropdown-content">
+                            <div class="dropdown-item" onclick="openServiceQuote('Landing Page', 800)">
+                                <i class="fas fa-rocket mr-2 text-blue-400"></i>
+                                <span>Landing Page</span>
+                            </div>
+                            <div class="dropdown-item" onclick="openServiceQuote('Dominio Web', 200)">
+                                <i class="fas fa-globe mr-2 text-green-400"></i>
+                                <span>Dominio Web</span>
+                            </div>
+                            <div class="dropdown-item" onclick="openServiceQuote('Mantenimiento Web', 300)">
+                                <i class="fas fa-wrench mr-2 text-purple-400"></i>
+                                <span>Mantenimiento Web</span>
+                            </div>
+                            <div class="dropdown-item" onclick="openQuoteModal()">
+                                <i class="fas fa-plus mr-2 text-pink-400"></i>
+                                <span>Otros Servicios</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i id="hamburger-icon" class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+       
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden mobile-menu-slide">
+            <div class="px-4 pt-4 pb-6 space-y-2 bg-gray-900 border-t border-gray-800 shadow-lg">
+                <a href="#inicio" class="mobile-nav-link block px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Inicio</a>
+                <a href="#sobre-mi" class="mobile-nav-link block px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Sobre Mí</a>
+                <a href="#servicios" class="mobile-nav-link block px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Servicios</a>
+                <a href="#portafolio" class="mobile-nav-link block px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Portafolio</a>
+                <a href="#ventajas" class="mobile-nav-link block px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Ventajas</a>
+                <a href="#proceso" class="mobile-nav-link block px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Proceso</a>
+                <a href="#contacto" class="mobile-nav-link block px-4 py-3 rounded-lg hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Contacto</a>
+                <div class="pt-4 border-t border-gray-800">
+                    <button onclick="openQuoteModal()" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                        Cotizar Proyecto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen pt-16 relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 opacity-50"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div class="absolute top-40 right-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute -bottom-8 left-40 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style="animation-delay: 4s;"></div>
+        </div>
+       
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="scroll-reveal">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-4">
+                        <i class="fas fa-code mr-2 text-blue-400"></i>
+                        <span>Desarrollador Web Senior • 6+ Años</span>
+                    </div>
+                   
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+                        BillCodex:<br>
+                        <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Código Puro</span><br>
+                        <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Resultados Profesionales</span>
+                    </h1>
+                   
+                    <h2 class="text-xl lg:text-2xl font-semibold mb-4 text-gray-300">
+                        Especialista en Desarrollo Web Empresarial
+                    </h2>
+                   
+                    <p class="text-base mb-6 text-gray-300 leading-relaxed">
+                        Desarrollador web senior especializado en <strong class="text-blue-400">HTML</strong>,
+                        <strong class="text-purple-400">CSS</strong>, <strong class="text-yellow-400">JavaScript</strong>, <strong class="text-cyan-400">Tailwind CSS</strong>,
+                        <strong class="text-green-400">Node.js</strong>, <strong class="text-gray-300">NextJS</strong> y <strong class="text-blue-400">React</strong>. 
+                        Soluciones empresariales únicas, optimizadas y completamente personalizadas sin dependencias de CMS.
+                    </p>
+                   
+                    <div class="flex flex-col sm:flex-row gap-3 mb-8">
+                        <div class="service-dropdown">
+                            <button onclick="toggleHeroDropdown()" class="btn-primary px-6 py-3 rounded-lg text-white font-semibold relative z-10 flex items-center justify-center">
+                                <i class="fas fa-rocket mr-2"></i>
+                                Iniciar Proyecto
+                                <i class="fas fa-chevron-down ml-2 text-sm"></i>
+                            </button>
+                            <div id="hero-dropdown" class="dropdown-content">
+                                <div class="dropdown-item" onclick="openServiceQuote('Landing Page', 800)">
+                                    <i class="fas fa-rocket mr-2 text-blue-400"></i>
+                                    <span>Landing Page</span>
+                                </div>
+                                <div class="dropdown-item" onclick="openServiceQuote('Dominio Web', 200)">
+                                    <i class="fas fa-globe mr-2 text-green-400"></i>
+                                    <span>Dominio Web</span>
+                                </div>
+                                <div class="dropdown-item" onclick="openServiceQuote('Mantenimiento Web', 300)">
+                                    <i class="fas fa-wrench mr-2 text-purple-400"></i>
+                                    <span>Mantenimiento Web</span>
+                                </div>
+                                <div class="dropdown-item" onclick="openQuoteModal()">
+                                    <i class="fas fa-plus mr-2 text-pink-400"></i>
+                                    <span>Otros Servicios</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="smoothScroll('#sobre-mi')" class="glass px-6 py-3 rounded-lg text-white font-semibold hover:bg-white hover:bg-opacity-20 transition-all">
+                            Conocer Más
+                        </button>
+                    </div>
+                   
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="text-center scroll-reveal" style="animation-delay: 0.2s;">
+                            <div class="text-2xl font-bold text-blue-400 mb-1 counter" data-target="6">0</div>
+                            <div class="text-xs text-gray-400">Años Exp.</div>
+                        </div>
+                        <div class="text-center scroll-reveal" style="animation-delay: 0.3s;">
+                            <div class="text-2xl font-bold text-purple-400 mb-1 counter" data-target="50">0</div>
+                            <div class="text-xs text-gray-400">Proyectos</div>
+                        </div>
+                        <div class="text-center scroll-reveal" style="animation-delay: 0.4s;">
+                            <div class="text-2xl font-bold text-green-400 mb-1 counter" data-target="100">0</div>
+                            <div class="text-xs text-gray-400">% Código Puro</div>
+                        </div>
+                        <div class="text-center scroll-reveal" style="animation-delay: 0.5s;">
+                            <div class="text-2xl font-bold text-pink-400 mb-1">24/7</div>
+                            <div class="text-xs text-gray-400">Soporte</div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="relative float-animation">
+                    <div class="code-container rounded-2xl overflow-hidden shadow-2xl">
+                        <!-- Code Header -->
+                        <div class="code-header p-4 flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="code-dots">
+                                    <div class="code-dot red bg-red-500"></div>
+                                    <div class="code-dot yellow bg-yellow-500"></div>
+                                    <div class="code-dot green bg-green-500"></div>
+                                </div>
+                                <div class="code-filename font-mono">
+                                    <i class="fas fa-file-code mr-2 text-xs"></i>
+                                    billcodex-enterprise.html
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2 text-xs text-gray-400">
+                                <i class="fas fa-shield-alt text-green-400"></i>
+                                <span>Secure</span>
+                                <i class="fas fa-bolt text-yellow-400 ml-2"></i>
+                                <span>Optimized</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Code Content -->
+                        <div class="code-content p-4 font-mono text-sm">
+                            <div class="code-line">
+                                <span class="line-number">1</span>
+                                <div class="typewriter code-syntax-html">&lt;!DOCTYPE html&gt;</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">2</span>
+                                <div class="code-syntax-tag">&lt;html <span class="code-syntax-attr">lang</span>=<span class="code-syntax-string">"es"</span>&gt;</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">3</span>
+                                <div class="code-syntax-tag">&lt;head&gt;</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">4</span>
+                                <div class="ml-4 code-syntax-tag">&lt;title&gt;<span class="code-syntax-string">Solución Empresarial</span>&lt;/title&gt;</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">5</span>
+                                <div class="ml-4 code-syntax-tag">&lt;meta <span class="code-syntax-attr">charset</span>=<span class="code-syntax-string">"UTF-8"</span>&gt;</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">6</span>
+                                <div class="code-syntax-tag">&lt;/head&gt;</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">7</span>
+                                <div class="code-syntax-tag">&lt;body&gt;</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">8</span>
+                                <div class="ml-4 code-syntax-comment">// Código escalable y mantenible</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">9</span>
+                                <div class="ml-4 code-syntax-comment">// Optimizado para producción</div>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">10</span>
+                                <div class="ml-4 code-syntax-keyword">const</div> <span class="code-syntax-string">quality</span> = <span class="code-syntax-string">'enterprise'</span>;
+                            </div>
+                        </div>
+                        
+                        <!-- Code Status Bar -->
+                        <div class="code-status p-3 flex items-center justify-between text-xs">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex items-center space-x-2">
+                                    <div class="status-indicator"></div>
+                                    <span class="text-green-300 font-medium">Certificado en calidad empresarial</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 text-gray-300">
+                                <div class="flex items-center space-x-1">
+                                    <i class="fas fa-check text-green-400"></i>
+                                    <span>Validated</span>
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <i class="fas fa-rocket text-blue-400"></i>
+                                    <span>Production Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Icons -->
+                    <div class="floating-icon -top-6 -right-6 w-12 h-12">
+                        <i class="fas fa-code text-white text-lg"></i>
+                    </div>
+                    <div class="floating-icon -bottom-4 -left-4 w-10 h-10" style="animation-delay: 2s;">
+                        <i class="fas fa-cog text-white text-sm"></i>
+                    </div>
+                    <div class="floating-icon top-1/2 -right-2 w-8 h-8" style="animation-delay: 4s;">
+                        <i class="fas fa-star text-white text-xs"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="sobre-mi" class="py-16 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-4">
+                    <i class="fas fa-user-circle mr-2 text-blue-400"></i>
+                    <span>Sobre Mí</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Desarrollador Web <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Senior</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Especialista en crear soluciones web de clase empresarial con código puro y arquitectura escalable
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
+                <div class="scroll-reveal">
+                    <div class="enhanced-card rounded-2xl p-6">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Mi Historia Profesional</h3>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Con más de 6 años desarrollando soluciones web profesionales, me especializo en crear aplicaciones y sitios web empresariales utilizando exclusivamente código puro. Mi enfoque se centra en la calidad, escalabilidad y mantenimiento a largo plazo.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            He trabajado con empresas de diversos sectores, desde startups hasta corporaciones, siempre priorizando la excelencia técnica y la experiencia del usuario final.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-600 bg-opacity-20 text-blue-400 rounded-full text-sm">Código Limpio</span>
+                            <span class="px-3 py-1 bg-purple-600 bg-opacity-20 text-purple-400 rounded-full text-sm">Arquitectura Escalable</span>
+                            <span class="px-3 py-1 bg-green-600 bg-opacity-20 text-green-400 rounded-full text-sm">SEO Optimizado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="enhanced-card rounded-2xl p-6">
+                        <h3 class="text-xl font-bold mb-4 text-purple-400">Certificaciones & Logros</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-yellow-400 mr-3"></i>
+                                <span class="text-gray-300">Certificación Avanzada en JavaScript y React</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-award text-blue-400 mr-3"></i>
+                                <span class="text-gray-300">Especialista en Performance Web (Google)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-shield-alt text-green-400 mr-3"></i>
+                                <span class="text-gray-300">Certificación en Seguridad Web OWASP</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-search text-purple-400 mr-3"></i>
+                                <span class="text-gray-300">SEO Técnico Avanzado (Google Analytics)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-mobile-alt text-cyan-400 mr-3"></i>
+                                <span class="text-gray-300">Responsive Design & Accessibility Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="scroll-reveal">
+                <div class="enhanced-card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-6 text-center">Stack Tecnológico Profesional</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-9 gap-4">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-orange-600 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fab fa-html5 text-2xl text-orange-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">HTML</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-600 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fab fa-css3-alt text-2xl text-blue-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">CSS</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-yellow-600 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fab fa-js-square text-2xl text-yellow-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">JavaScript</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-cyan-600 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-wind text-2xl text-cyan-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">Tailwind CSS</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-green-600 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fab fa-node-js text-2xl text-green-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">Node.js</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-gray-800 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-code text-2xl text-gray-300"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">NextJS</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fab fa-react text-2xl text-blue-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">React</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-purple-600 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fab fa-git-alt text-2xl text-purple-400"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">Git</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-blue-700 bg-opacity-20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-code text-2xl text-blue-300"></i>
+                            </div>
+                            <span class="text-sm text-gray-400">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Stats Section -->
+    <section class="py-12 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="enhanced-card rounded-2xl p-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="scroll-reveal">
+                        <div class="text-3xl font-bold text-blue-400 mb-2 counter" data-target="50">0</div>
+                        <div class="text-sm text-gray-400">Proyectos Completados</div>
+                    </div>
+                    <div class="scroll-reveal">
+                        <div class="text-3xl font-bold text-purple-400 mb-2 counter" data-target="15">0</div>
+                        <div class="text-sm text-gray-400">Empresas Atendidas</div>
+                    </div>
+                    <div class="scroll-reveal">
+                        <div class="text-3xl font-bold text-green-400 mb-2 counter" data-target="99">0</div>
+                        <div class="text-sm text-gray-400">% Satisfacción</div>
+                    </div>
+                    <div class="scroll-reveal">
+                        <div class="text-3xl font-bold text-pink-400 mb-2 counter" data-target="2">0</div>
+                        <div class="text-sm text-gray-400">Días Promedio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-4">
+                    <i class="fas fa-quote-left mr-2 text-blue-400"></i>
+                    <span>Testimonios de Clientes Satisfechos</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Lo que dicen <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">mis clientes</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Testimonios reales de clientes que han transformado su presencia digital con BillCodex
+                </p>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <div class="testimonials-track" id="testimonials-track">
+                    <!-- Testimonial slides will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-4">
+                    <i class="fas fa-cogs mr-2 text-blue-400"></i>
+                    <span>Servicios Profesionales</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Soluciones Web <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Empresariales</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Desarrollo cada proyecto con código puro, sin WordPress ni CMS. Soluciones 
+                    únicas, rápidas, seguras y completamente personalizadas.
+                </p>
+            </div>
+           
+            <div class="service-cards-grid">
+                <!-- Landing Pages -->
+                <div class="enhanced-card rounded-2xl p-6 scroll-reveal">
+                    <div class="service-card-content">
+                        <div class="service-icon w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-rocket text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Landing Pages</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Páginas de aterrizaje optimizadas para conversión con diseño atractivo y llamadas a la acción efectivas.
+                        </p>
+                        <div class="service-card-features">
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Diseño Responsive
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Optimización SEO
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Formularios de contacto
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Análisis de conversión
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <div class="text-xl font-bold text-blue-400 mb-3">Desde S/ 800</div>
+                            <button onclick="openServiceQuote('Landing Pages', 800)" class="w-full btn-primary py-2.5 rounded-lg text-white font-semibold text-sm relative z-10">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Sitios Corporativos -->
+                <div class="enhanced-card rounded-2xl p-6 scroll-reveal">
+                    <div class="service-card-content">
+                        <div class="service-icon w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-building text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Sitios Corporativos</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Sitios web profesionales que reflejan la identidad de tu empresa y generan confianza en tus clientes.
+                        </p>
+                        <div class="service-card-features">
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Múltiples secciones
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Galería de proyectos
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Blog integrado
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Diseño Responsive
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <div class="text-xl font-bold text-blue-400 mb-3">Desde S/ 1,500</div>
+                            <button onclick="openServiceQuote('Sitios Corporativos', 1500)" class="w-full btn-primary py-2.5 rounded-lg text-white font-semibold text-sm relative z-10">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Aplicaciones Web -->
+                <div class="enhanced-card rounded-2xl p-6 scroll-reveal">
+                    <div class="service-card-content">
+                        <div class="service-icon w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-mobile-alt text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Páginas Web</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Páginas Web interactivas y funcionales desarrolladas con HTML, Tailwind CSS, React y JavaScript y las mejores prácticas.
+                        </p>
+                        <div class="service-card-features">
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Interfaz intuitiva
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Codigo limpio
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Formularios de contacto
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Diseño Responsive
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <div class="text-xl font-bold text-blue-400 mb-3">Desde S/ 2,500</div>
+                            <button onclick="openServiceQuote('Aplicaciones Web', 2500)" class="w-full btn-primary py-2.5 rounded-lg text-white font-semibold text-sm relative z-10">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- E-commerce -->
+                <div class="enhanced-card rounded-2xl p-6 scroll-reveal">
+                    <div class="service-card-content">
+                        <div class="service-icon w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-shopping-cart text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">E-commerce</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Tiendas online completas con carrito de compras y pasarelas de pago.
+                        </p>
+                        <div class="service-card-features">
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Carrito de compras
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Pasarelas de pago
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Gestión de productos
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Codigo limpio
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <div class="text-xl font-bold text-blue-400 mb-3">Desde S/ 3,000</div>
+                            <button onclick="openServiceQuote('E-commerce', 3000)" class="w-full btn-primary py-2.5 rounded-lg text-white font-semibold text-sm relative z-10">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hosting & Dominio -->
+                <div class="enhanced-card rounded-2xl p-6 scroll-reveal">
+                    <div class="service-card-content">
+                        <div class="service-icon w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-server text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Hosting & Dominio</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Configuración completa de hosting optimizado y dominio personalizado para tu proyecto web.
+                        </p>
+                        <div class="service-card-features">
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Dominio gratis primer año
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    SSL incluido
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Cloudflare CDN
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Backups automáticos
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <div class="text-xl font-bold text-blue-400 mb-3">Desde S/ 200/año</div>
+                            <button onclick="openServiceQuote('Hosting & Dominio', 200)" class="w-full btn-primary py-2.5 rounded-lg text-white font-semibold text-sm relative z-10">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Optimización -->
+                <div class="enhanced-card rounded-2xl p-6 scroll-reveal">
+                    <div class="service-card-content">
+                        <div class="service-icon w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-tachometer-alt text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Optimización</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Mejora el rendimiento de tu sitio web existente con técnicas avanzadas de optimización.
+                        </p>
+                        <div class="service-card-features">
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Optimización de velocidad
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    SEO técnico
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Compresión de imágenes
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Código limpio
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <div class="text-xl font-bold text-blue-400 mb-3">Desde S/ 600</div>
+                            <button onclick="openServiceQuote('Optimización', 600)" class="w-full btn-primary py-2.5 rounded-lg text-white font-semibold text-sm relative z-10">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Mantenimiento -->
+                <div class="enhanced-card rounded-2xl p-6 scroll-reveal">
+                    <div class="service-card-content">
+                        <div class="service-icon w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-wrench text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mantenimiento</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Servicios de mantenimiento continuo para mantener tu sitio web actualizado y seguro.
+                        </p>
+                        <div class="service-card-features">
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Actualizaciones regulares
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Monitoreo 24/7
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Soporte técnico
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Codigo optimizado
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <div class="text-xl font-bold text-blue-400 mb-3">S/ 300/mes</div>
+                            <button onclick="openServiceQuote('Mantenimiento', 300)" class="w-full btn-primary py-2.5 rounded-lg text-white font-semibold text-sm relative z-10">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rediseño Web -->
+                <div class="enhanced-card rounded-2xl p-6 scroll-reveal">
+                    <div class="service-card-content">
+                        <div class="service-icon w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-paint-brush text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Rediseño Web</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Renovación completa de sitios web existentes con diseño moderno y mejores funcionalidades.
+                        </p>
+                        <div class="service-card-features">
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Análisis del sitio actual
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Nuevo diseño
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Migración de contenido
+                                </li>
+                                <li class="flex items-center text-green-400 text-sm">
+                                    <i class="fas fa-check mr-2 text-xs"></i>
+                                    Mejoras de UX
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <div class="text-xl font-bold text-blue-400 mb-3">Desde S/ 1,200</div>
+                            <button onclick="openServiceQuote('Rediseño Web', 1200)" class="w-full btn-primary py-2.5 rounded-lg text-white font-semibold text-sm relative z-10">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portafolio" class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-4">
+                    <i class="fas fa-briefcase mr-2 text-blue-400"></i>
+                    <span>Proyectos Destacados</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Mi <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Portafolio</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Proyectos reales desarrollados con tecnologías modernas y código puro
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Herramientas Contables BILUZ -->
+                <div class="enhanced-card rounded-2xl overflow-hidden scroll-reveal group hover:scale-105 transition-all duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-calculator text-6xl text-white opacity-80"></i>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Extensión Web</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+                            Herramientas Contables BILUZ
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Extensión de Chrome con herramientas para contadores: IA integrada, calculadoras, cronogramas SUNAT y más funcionalidades especializadas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-600 bg-opacity-20 text-blue-400 px-2 py-1 rounded text-xs">JavaScript</span>
+                            <span class="bg-green-600 bg-opacity-20 text-green-400 px-2 py-1 rounded text-xs">Chrome API</span>
+                            <span class="bg-purple-600 bg-opacity-20 text-purple-400 px-2 py-1 rounded text-xs">IA</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://chromewebstore.google.com/detail/herramientas-contables-bi/ejlloppgdgnapnliehbfehbnejdgbnap" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm font-semibold flex items-center">
+                                <i class="fab fa-chrome mr-2"></i>
+                                Ver en Chrome Store
+                            </a>
+                            <i class="fas fa-external-link-alt text-gray-500 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILUZ Web Tools -->
+                <div class="enhanced-card rounded-2xl overflow-hidden scroll-reveal group hover:scale-105 transition-all duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-green-600 to-teal-700 flex items-center justify-center">
+                        <i class="fas fa-tools text-6xl text-white opacity-80"></i>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Web App</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors">
+                            BILUZ Web Tools
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Plataforma web con herramientas contables actualizadas mensualmente. Calculadoras, cronogramas y utilidades para profesionales contables.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-600 bg-opacity-20 text-orange-400 px-2 py-1 rounded text-xs">NextJS</span>
+                            <span class="bg-blue-600 bg-opacity-20 text-blue-400 px-2 py-1 rounded text-xs">React</span>
+                            <span class="bg-yellow-600 bg-opacity-20 text-yellow-400 px-2 py-1 rounded text-xs">JavaScript</span>
+                            <span class="bg-cyan-600 bg-opacity-20 text-cyan-400 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://tools.ebiluz.com" target="_blank" class="text-green-400 hover:text-green-300 text-sm font-semibold flex items-center">
+                                <i class="fas fa-globe mr-2"></i>
+                                Visitar Sitio
+                            </a>
+                            <i class="fas fa-external-link-alt text-gray-500 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TuneConnect -->
+                <div class="enhanced-card rounded-2xl overflow-hidden scroll-reveal group hover:scale-105 transition-all duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-600 to-pink-700 flex items-center justify-center">
+                        <i class="fas fa-music text-6xl text-white opacity-80"></i>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Plataforma DJ</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors">
+                            TuneConnect
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Plataforma para DJs con creación de portafolios, generador de códigos QR, conversión de imágenes a QR y gestión de solicitudes musicales.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-600 bg-opacity-20 text-purple-400 px-2 py-1 rounded text-xs">React</span>
+                            <span class="bg-cyan-600 bg-opacity-20 text-cyan-400 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                            <span class="bg-pink-600 bg-opacity-20 text-pink-400 px-2 py-1 rounded text-xs">QR API</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://tuneconnect.vivarfa.com/" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm font-semibold flex items-center">
+                                <i class="fas fa-headphones mr-2"></i>
+                                Ver Plataforma
+                            </a>
+                            <i class="fas fa-external-link-alt text-gray-500 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vivarfa VIP Music -->
+                <div class="enhanced-card rounded-2xl overflow-hidden scroll-reveal group hover:scale-105 transition-all duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-red-600 to-orange-700 flex items-center justify-center">
+                        <i class="fas fa-compact-disc text-6xl text-white opacity-80"></i>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">E-commerce</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-400 transition-colors">
+                            VIVARFA VIP MUSIC
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Tienda online para DJs con venta de música, membresías y packs. Integración con Google Drive para contenido dinámico y actualizaciones automáticas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-600 bg-opacity-20 text-red-400 px-2 py-1 rounded text-xs">HTML</span>
+                            <span class="bg-blue-600 bg-opacity-20 text-blue-400 px-2 py-1 rounded text-xs">Pagos</span>
+                            <span class="bg-green-600 bg-opacity-20 text-green-400 px-2 py-1 rounded text-xs">Google API</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://www.vivarfa.com/" target="_blank" class="text-red-400 hover:text-red-300 text-sm font-semibold flex items-center">
+                                <i class="fas fa-shopping-cart mr-2"></i>
+                                Ver Tienda
+                            </a>
+                            <i class="fas fa-external-link-alt text-gray-500 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facturador Electrónico -->
+                <div class="enhanced-card rounded-2xl overflow-hidden scroll-reveal group hover:scale-105 transition-all duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-indigo-600 to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-file-invoice text-6xl text-white opacity-80"></i>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Herramienta</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-indigo-400 transition-colors">
+                            Facturador Electrónico 
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Generador de facturas rápidas tipo nota de venta. Incluye descarga en PDF, cálculos automáticos y diseño profesional para pequeños negocios.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-600 bg-opacity-20 text-orange-400 px-2 py-1 rounded text-xs">HTML</span>
+                            <span class="bg-red-600 bg-opacity-20 text-red-400 px-2 py-1 rounded text-xs">PDF.js</span>
+                            <span class="bg-yellow-600 bg-opacity-20 text-yellow-400 px-2 py-1 rounded text-xs">JavaScript</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="https://factura.vivarfa.com/" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-sm font-semibold flex items-center">
+                                <i class="fas fa-receipt mr-2"></i>
+                                Usar Herramienta
+                            </a>
+                            <i class="fas fa-external-link-alt text-gray-500 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILUZ Estudio Contable -->
+                <div class="enhanced-card rounded-2xl overflow-hidden scroll-reveal group hover:scale-105 transition-all duration-300">
+                    <div class="relative h-48 bg-gradient-to-br from-teal-600 to-green-700 flex items-center justify-center">
+                        <i class="fas fa-building text-6xl text-white opacity-80"></i>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold">Corporativo</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-teal-400 transition-colors">
+                            Estudio Contable BILUZ
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Sitio web corporativo para estudio contable especializado en servicios de contabilidad para empresas peruanas. Diseño profesional y funcional.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-600 bg-opacity-20 text-orange-400 px-2 py-1 rounded text-xs">HTML</span>
+                            <span class="bg-blue-600 bg-opacity-20 text-blue-400 px-2 py-1 rounded text-xs">CSS</span>
+                            <span class="bg-green-600 bg-opacity-20 text-green-400 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="http://www.ebiluz.com/" target="_blank" class="text-teal-400 hover:text-teal-300 text-sm font-semibold flex items-center">
+                                <i class="fas fa-briefcase mr-2"></i>
+                                Ver Sitio Web
+                            </a>
+                            <i class="fas fa-external-link-alt text-gray-500 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Stats -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 scroll-reveal">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-400 mb-2 counter" data-target="50">0</div>
+                    <div class="text-gray-400 text-sm">Proyectos Completados</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-green-400 mb-2 counter" data-target="100">0</div>
+                    <div class="text-gray-400 text-sm">% Código Puro</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-purple-400 mb-2 counter" data-target="5">0</div>
+                    <div class="text-gray-400 text-sm">Tecnologías Dominadas</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-pink-400 mb-2 counter" data-target="24">0</div>
+                    <div class="text-gray-400 text-sm">Soporte 24/7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="ventajas" class="py-12 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 scroll-reveal">
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-4">
+                    <i class="fas fa-star mr-2 text-blue-400"></i>
+                    <span>Ventajas Competitivas</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    ¿Por qué elegir <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">BillCodex</span>?
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Ventajas de trabajar con código puro vs CMS tradicionales
+                </p>
+            </div>
+           
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="enhanced-card rounded-2xl p-6 text-center scroll-reveal">
+                    <div class="w-14 h-14 bg-gradient-to-r from-green-400 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Velocidad Superior</h3>
+                    <p class="text-gray-400 text-sm">
+                        Sitios web hasta 10x más rápidos que WordPress. Sin plugins innecesarios ni código basura.
+                    </p>
+                </div>
+               
+                <div class="enhanced-card rounded-2xl p-6 text-center scroll-reveal">
+                    <div class="w-14 h-14 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Máxima Seguridad</h3>
+                    <p class="text-gray-400 text-sm">
+                        Sin vulnerabilidades de CMS. Código limpio y seguro que protege tu sitio de ataques.
+                    </p>
+                </div>
+               
+                <div class="enhanced-card rounded-2xl p-6 text-center scroll-reveal">
+                    <div class="w-14 h-14 bg-gradient-to-r from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cog text-xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">100% Personalizable</h3>
+                    <p class="text-gray-400 text-sm">
+                        Diseño único y funcionalidades exactas a tus necesidades. Sin limitaciones de templates.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section with Enhanced Animations -->
+    <section id="proceso" class="py-16 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-4">
+                    <i class="fas fa-tasks mr-2 text-blue-400"></i>
+                    <span>Metodología Profesional</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    Mi <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Proceso</span> de Trabajo
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Metodología probada para entregar proyectos excepcionales en tiempo récord
+                </p>
+            </div>
+           
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center process-item" data-step="1">
+                    <div class="process-number w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl relative">
+                        1
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-ping opacity-75"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
+                        <span class="relative z-10">1</span>
+                    </div>
+                    <div class="enhanced-card rounded-xl p-6 h-full">
+                        <div class="mb-4">
+                            <i class="fas fa-search text-3xl text-blue-400 mb-3"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Análisis</h3>
+                        <p class="text-gray-400 text-sm">
+                            Entiendo tus necesidades, objetivos y audiencia para crear la estrategia perfecta.
+                        </p>
+                        <div class="mt-4 text-xs text-blue-400 font-semibold">
+                            1-2 días
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="text-center process-item" data-step="2">
+                    <div class="process-number w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl relative">
+                        2
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full animate-ping opacity-75"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full"></div>
+                        <span class="relative z-10">2</span>
+                    </div>
+                    <div class="enhanced-card rounded-xl p-6 h-full">
+                        <div class="mb-4">
+                            <i class="fas fa-palette text-3xl text-purple-400 mb-3"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Diseño</h3>
+                        <p class="text-gray-400 text-sm">
+                            Creo wireframes y mockups detallados que reflejen tu marca y maximicen conversión.
+                        </p>
+                        <div class="mt-4 text-xs text-purple-400 font-semibold">
+                            2-3 días
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="text-center process-item" data-step="3">
+                    <div class="process-number w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl relative">
+                        3
+                        <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-red-600 rounded-full animate-ping opacity-75"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-red-600 rounded-full"></div>
+                        <span class="relative z-10">3</span>
+                    </div>
+                    <div class="enhanced-card rounded-xl p-6 h-full">
+                        <div class="mb-4">
+                            <i class="fas fa-code text-3xl text-pink-400 mb-3"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Desarrollo</h3>
+                        <p class="text-gray-400 text-sm">
+                            Codifico tu sitio con mejores prácticas, código limpio y optimización completa.
+                        </p>
+                        <div class="mt-4 text-xs text-pink-400 font-semibold">
+                            3-7 días
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="text-center process-item" data-step="4">
+                    <div class="process-number w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl relative">
+                        4
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-600 rounded-full animate-ping opacity-75"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-600 rounded-full"></div>
+                        <span class="relative z-10">4</span>
+                    </div>
+                    <div class="enhanced-card rounded-xl p-6 h-full">
+                        <div class="mb-4">
+                            <i class="fas fa-rocket text-3xl text-orange-400 mb-3"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Lanzamiento</h3>
+                        <p class="text-gray-400 text-sm">
+                            Pruebas exhaustivas, configuración de hosting y lanzamiento con soporte continuo.
+                        </p>
+                        <div class="mt-4 text-xs text-orange-400 font-semibold">
+                            1 día
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Timeline -->
+            <div class="mt-12 text-center">
+                <div class="enhanced-card rounded-2xl p-6">
+                    <h4 class="text-xl font-bold mb-4 text-blue-400">Tiempo Total Promedio</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <div class="text-2xl font-bold text-green-400 mb-2">7-14 días</div>
+                            <div class="text-sm text-gray-400">Landing Pages</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-blue-400 mb-2">14-21 días</div>
+                            <div class="text-sm text-gray-400">Sitios Corporativos</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-purple-400 mb-2">21-30 días</div>
+                            <div class="text-sm text-gray-400">Páginas Web</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Enhanced Left Side -->
+    <section id="contacto" class="py-16 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-4">
+                    <i class="fas fa-handshake mr-2 text-blue-400"></i>
+                    <span>Contacto Profesional</span>
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+                    ¿Listo para <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Empezar</span>?
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Conversemos sobre tu proyecto y hagamos realidad tu presencia digital profesional
+                </p>
+            </div>
+           
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="scroll-reveal">
+                    <div class="enhanced-card rounded-2xl p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                       
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-green-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fab fa-whatsapp text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">WhatsApp</p>
+                                    <p class="text-gray-400">+51 927 450 053</p>
+                                    <p class="text-xs text-green-400">Respuesta inmediata</p>
+                                </div>
+                            </div>
+                           
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p class="text-gray-400">avivarfa@gmail.com</p>
+                                    <p class="text-xs text-blue-400">Respuesta en 2-4 horas</p>
+                                </div>
+                            </div>
+                           
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Horario de Atención</p>
+                                    <p class="text-gray-400">Lun - Sab: 9:00 AM - 8:00 PM</p>
+                                    <p class="text-xs text-purple-400">Domingos: Solo emergencias</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-red-400 to-red-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Ubicación</p>
+                                    <p class="text-gray-400">Lima, Perú</p>
+                                    <p class="text-xs text-red-400">Trabajo remoto global</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="border-t border-gray-700 pt-6">
+                            <h4 class="text-lg font-semibold mb-4">¿Por qué elegirme?</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-center text-green-400">
+                                    <i class="fas fa-check mr-3"></i>
+                                    6+ años de experiencia comprobada
+                                </li>
+                                <li class="flex items-center text-green-400">
+                                    <i class="fas fa-check mr-3"></i>
+                                    Código 100% puro y optimizado
+                                </li>
+                                <li class="flex items-center text-green-400">
+                                    <i class="fas fa-check mr-3"></i>
+                                    Soporte técnico continuo incluido
+                                </li>
+                                <li class="flex items-center text-green-400">
+                                    <i class="fas fa-check mr-3"></i>
+                                    Garantía de satisfacción total
+                                </li>
+                                <li class="flex items-center text-green-400">
+                                    <i class="fas fa-check mr-3"></i>
+                                    Entrega puntual garantizada
+                                </li>
+                                <li class="flex items-center text-green-400">
+                                    <i class="fas fa-check mr-3"></i>
+                                    Sin costos ocultos ni sorpresas
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t border-gray-700 pt-6 mt-6">
+                            <h4 class="text-lg font-semibold mb-4">Métodos de Pago</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-credit-card text-blue-400 mr-2"></i>
+                                    <span class="text-sm text-gray-300">Tarjetas</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-university text-green-400 mr-2"></i>
+                                    <span class="text-sm text-gray-300">Transferencia</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fab fa-paypal text-blue-500 mr-2"></i>
+                                    <span class="text-sm text-gray-300">PayPal</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-mobile-alt text-purple-400 mr-2"></i>
+                                    <span class="text-sm text-gray-300">Yape/Plin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="scroll-reveal">
+                    <div class="enhanced-card rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Envíame un Mensaje</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Nombre Completo</label>
+                                <input type="text" name="name" required class="w-full form-input rounded-lg p-3 text-white placeholder-gray-400" placeholder="Tu nombre">
+                            </div>
+                           
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" name="email" required class="w-full form-input rounded-lg p-3 text-white placeholder-gray-400" placeholder="tu@email.com">
+                            </div>
+                           
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Servicio de Interés</label>
+                                <select name="service" class="w-full form-input rounded-lg p-3 text-white">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="landing">Landing Pages</option>
+                                    <option value="corporativo">Sitio Corporativo</option>
+                                    <option value="webapp">Página Web</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="hosting">Hosting & Dominio</option>
+                                    <option value="optimizacion">Optimización</option>
+                                    <option value="mantenimiento">Mantenimiento</option>
+                                    <option value="rediseno">Rediseño Web</option>
+                                </select>
+                            </div>
+                           
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Presupuesto Aproximado</label>
+                                <select name="budget" class="w-full form-input rounded-lg p-3 text-white">
+                                    <option value="">Selecciona tu presupuesto</option>
+                                    <option value="200-800">S/ 200 - S/ 800</option>
+                                    <option value="800-1500">S/ 800 - S/ 1,500</option>
+                                    <option value="1500-3000">S/ 1,500 - S/ 3,000</option>
+                                    <option value="3000+">S/ 3,000+</option>
+                                </select>
+                            </div>
+                           
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Describe tu Proyecto</label>
+                                <textarea name="message" rows="4" required class="w-full form-input rounded-lg p-3 text-white placeholder-gray-400" placeholder="Cuéntame sobre tu proyecto, objetivos y cualquier detalle importante..."></textarea>
+                            </div>
+                           
+                            <button type="submit" class="w-full btn-primary py-4 rounded-lg text-white font-semibold text-lg relative z-10">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-16 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <a href="#inicio" class="flex items-center space-x-3 group mr-3">
+                            <div class="logo-container">
+                                <img src="assets/images/logo.png" alt="BillCodex Logo" class="logo-img w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            </div>
+                            <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent transition-all duration-300 group-hover:from-purple-400 group-hover:to-blue-500">BillCodex</h3>
+                        </a>
+                        <span class="px-2 py-1 bg-blue-600 bg-opacity-20 text-blue-400 rounded text-xs font-semibold">Senior Developer</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Desarrollador web senior especializado en crear soluciones empresariales con código puro. 
+                        6+ años de experiencia transformando ideas en realidades digitales de alto rendimiento.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/51927450053" target="_blank" class="w-10 h-10 bg-green-600 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </a>
+                        <a href="mailto:avivarfa@gmail.com" class="w-10 h-10 bg-blue-600 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fas fa-envelope text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alexander-billy-vivar-fabian-079350342" target="_blank" class="w-10 h-10 bg-blue-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin text-white"></i>
+                        </a>
+                        <a href="https://github.com/vivarfa" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-github text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">Landing Pages</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">Sitios Corporativos</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">Páginas Web</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">E-commerce</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">Hosting & Dominio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">Optimización</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">Mantenimiento</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-blue-400 transition-colors text-sm">Rediseño Web</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-400 text-sm">
+                            <i class="fab fa-whatsapp mr-3 text-green-400"></i>
+                            +51 927 450 053
+                        </li>
+                        <li class="flex items-center text-gray-400 text-sm">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            avivarfa@gmail.com
+                        </li>
+                        <li class="flex items-center text-gray-400 text-sm">
+                            <i class="fas fa-clock mr-3 text-purple-400"></i>
+                            Lun - Sab: 9AM - 8PM
+                        </li>
+                        <li class="flex items-center text-gray-400 text-sm">
+                            <i class="fas fa-map-marker-alt mr-3 text-pink-400"></i>
+                            Perú
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="enhanced-card rounded-2xl p-6 text-center">
+                    <i class="fas fa-rocket text-3xl text-blue-400 mb-3"></i>
+                    <h5 class="font-semibold mb-2">Proyecto Nuevo</h5>
+                    <p class="text-gray-400 text-sm mb-4">¿Tienes una idea? Hagámosla realidad</p>
+                    <button onclick="openQuoteModal()" class="w-full btn-primary py-2 rounded-lg text-white font-semibold text-sm relative z-10">
+                        Cotizar Ahora
+                    </button>
+                </div>
+                <div class="enhanced-card rounded-2xl p-6 text-center">
+                    <i class="fab fa-whatsapp text-3xl text-green-400 mb-3"></i>
+                    <h5 class="font-semibold mb-2">Chat Directo</h5>
+                    <p class="text-gray-400 text-sm mb-4">Conversemos por WhatsApp</p>
+                    <button onclick="openWhatsAppModal()" class="w-full bg-green-600 hover:bg-green-500 py-2 rounded-lg text-white font-semibold text-sm transition-colors">
+                        Chatear
+                    </button>
+                </div>
+                <div class="enhanced-card rounded-2xl p-6 text-center">
+                    <i class="fas fa-phone text-3xl text-purple-400 mb-3"></i>
+                    <h5 class="font-semibold mb-2">Consulta Gratis</h5>
+                    <p class="text-gray-400 text-sm mb-4">15 min de consultoría gratuita</p>
+                    <a href="tel:+51927450053" class="w-full bg-purple-600 hover:bg-purple-500 py-2 rounded-lg text-white font-semibold text-sm transition-colors block">
+                        Llamar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="enhanced-card rounded-2xl p-6 mb-8">
+                <h4 class="text-lg font-semibold mb-4 text-center text-white">Tecnologías que Domino</h4>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-3 py-1 bg-orange-600 bg-opacity-20 text-orange-400 rounded-full text-sm">HTML</span>
+                    <span class="px-3 py-1 bg-blue-600 bg-opacity-20 text-blue-400 rounded-full text-sm">CSS</span>
+                    <span class="px-3 py-1 bg-yellow-600 bg-opacity-20 text-yellow-400 rounded-full text-sm">JavaScript</span>
+                    <span class="px-3 py-1 bg-cyan-600 bg-opacity-20 text-cyan-400 rounded-full text-sm">Tailwind CSS</span>
+                    <span class="px-3 py-1 bg-green-600 bg-opacity-20 text-green-400 rounded-full text-sm">Node.js</span>
+                    <span class="px-3 py-1 bg-gray-800 bg-opacity-20 text-gray-300 rounded-full text-sm">NextJS</span>
+                    <span class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm">React</span>
+                    <span class="px-3 py-1 bg-purple-600 bg-opacity-20 text-purple-400 rounded-full text-sm">Git</span>
+                    <span class="px-3 py-1 bg-blue-700 bg-opacity-20 text-blue-300 rounded-full text-sm">VS Code</span>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="text-center">
+                    <p class="text-gray-400 text-sm">
+                        © <span id="current-year"></span> BillCodex. Todos los derechos reservados. | 
+                        <a href="politicas/" class="text-blue-400 hover:text-blue-300 transition-colors">Política de Privacidad</a> | 
+                        <a href="terminos/" class="text-blue-400 hover:text-blue-300 transition-colors">Términos de Servicio</a>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quote-modal" class="fixed inset-0 z-50 hidden modal-overlay">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content rounded-2xl p-8 max-w-md w-full">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">Cotizar Proyecto</h3>
+                    <button onclick="closeQuoteModal()" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+               
+                <form id="quote-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Nombre</label>
+                        <input type="text" name="name" required class="w-full form-input rounded-lg p-3 text-white placeholder-gray-400" placeholder="Tu nombre">
+                    </div>
+                   
+                    <div>
+                        <label class="block text-sm font-medium mb-2">WhatsApp</label>
+                        <input type="tel" name="phone" required class="w-full form-input rounded-lg p-3 text-white placeholder-gray-400" placeholder="+51 999 999 999">
+                    </div>
+                   
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Servicio</label>
+                        <select id="selected-service" name="service" required class="w-full form-input rounded-lg p-3 text-white bg-gray-700">
+                            <option value="">Selecciona un servicio</option>
+                            <option value="Landing Page - Desde S/ 800">Landing Page - Desde S/ 800</option>
+                            <option value="Sitio Web Corporativo - Desde S/ 1200">Sitio Web Corporativo - Desde S/ 1200</option>
+                            <option value="Página Web - Desde S/ 2000">Página Web - Desde S/ 2000</option>
+                            <option value="E-commerce - Desde S/ 1500">E-commerce - Desde S/ 1500</option>
+                            <option value="Dominio Web - Desde S/ 200">Dominio Web - Desde S/ 200</option>
+                            <option value="Mantenimiento Web - Desde S/ 300">Mantenimiento Web - Desde S/ 300</option>
+                            <option value="Hosting Web - Desde S/ 150">Hosting Web - Desde S/ 150</option>
+                            <option value="Otro servicio">Otro servicio (especificar en descripción)</option>
+                        </select>
+                    </div>
+                   
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Describe tu proyecto</label>
+                        <textarea name="description" rows="3" required class="w-full form-input rounded-lg p-3 text-white placeholder-gray-400" placeholder="Cuéntanos qué necesitas..."></textarea>
+                    </div>
+                   
+                    <button type="submit" class="w-full btn-primary py-3 rounded-lg text-white font-semibold relative z-10">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Enviar Cotización
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Chat Modal -->
+    <div id="whatsapp-modal" class="fixed inset-0 z-50 hidden modal-overlay">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="modal-content rounded-2xl p-6 max-w-md w-full">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">BillCodex</h3>
+                            <p class="text-sm text-green-400">En línea</p>
+                        </div>
+                    </div>
+                    <button onclick="closeWhatsAppModal()" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+               
+                <div class="chat-container h-64 overflow-y-auto mb-4 space-y-3 hide-scrollbar">
+                    <div class="chat-bubble-received p-3 text-sm">
+                        ¡Hola! 👋 Soy BillCodex. ¿En qué puedo ayudarte hoy?
+                    </div>
+                    <div class="chat-bubble-received p-3 text-sm">
+                        Para brindarte una mejor atención, por favor compárteme tu nombre y cuéntame sobre tu proyecto.
+                    </div>
+                </div>
+               
+                <form id="whatsapp-form" class="space-y-3">
+                    <input type="text" name="name" required class="w-full form-input rounded-lg p-3 text-white placeholder-gray-400" placeholder="Tu nombre">
+                    <textarea name="message" rows="2" required class="w-full form-input rounded-lg p-3 text-white placeholder-gray-400" placeholder="¿En qué puedo ayudarte?"></textarea>
+                    <button type="submit" class="w-full bg-green-500 hover:bg-green-600 py-3 rounded-lg text-white font-semibold transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Continuar en WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script src="assets/js/main.js"></script>
+
+    <!-- WhatsApp Button & Chat -->
+    <div id="whatsapp-btn" class="whatsapp-btn" onclick="toggleWhatsAppChat()">
+        <i class="fab fa-whatsapp text-2xl text-white"></i>
+    </div>
+    
+    <div id="whatsapp-chat" class="whatsapp-chat">
+        <div class="whatsapp-header">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                    <i class="fab fa-whatsapp text-xl text-white"></i>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white">BillCodex</h4>
+                    <p class="text-xs text-green-100">En línea</p>
+                </div>
+            </div>
+            <button onclick="toggleWhatsAppChat()" class="text-white hover:text-green-100 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="whatsapp-options">
+            <div class="whatsapp-option" onclick="sendWhatsAppMessage('Hola! Me interesa una Landing Page profesional. ¿Podrías darme más información?')">
+                <i class="fas fa-rocket text-blue-400 mr-3"></i>
+                <div>
+                    <div class="font-semibold text-sm">Landing Page</div>
+                    <div class="text-xs text-gray-400">Página de aterrizaje profesional</div>
+                </div>
+            </div>
+            
+            <div class="whatsapp-option" onclick="sendWhatsAppMessage('Hola! Necesito un sitio web corporativo. ¿Cuáles son los precios y tiempos?')">
+                <i class="fas fa-building text-purple-400 mr-3"></i>
+                <div>
+                    <div class="font-semibold text-sm">Sitio Corporativo</div>
+                    <div class="text-xs text-gray-400">Web empresarial completa</div>
+                </div>
+            </div>
+            
+            <div class="whatsapp-option" onclick="sendWhatsAppMessage('Hola! Me interesa una aplicación web personalizada. ¿Podrías ayudarme?')">
+                <i class="fas fa-mobile-alt text-green-400 mr-3"></i>
+                <div>
+                    <div class="font-semibold text-sm">Aplicación Web</div>
+                    <div class="text-xs text-gray-400">Página Web interactiva</div>
+                </div>
+            </div>
+            
+            <div class="whatsapp-option" onclick="sendWhatsAppMessage('Hola! Tengo una consulta general sobre sus servicios web.')">
+                <i class="fas fa-question-circle text-yellow-400 mr-3"></i>
+                <div>
+                    <div class="font-semibold text-sm">Consulta General</div>
+                    <div class="text-xs text-gray-400">Otras preguntas</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
